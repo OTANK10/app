@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Header from '../components/Header';
 
 const shoeSections = [
   {
@@ -51,7 +52,10 @@ export default function Component() {
   );
 
   return (
-    <div className="min-h-screen bg-black p-8 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-black p-8 flex flex-col items-center justify-start">
+      {/* Header Component */}
+      <Header />
+
       <div className="flex flex-col md:flex-row w-full max-w-4xl">
         <div className="relative w-full max-w-md mx-auto">
           <Image
@@ -84,7 +88,7 @@ export default function Component() {
 
       <div className="mt-8 text-white text-center">
         <p className="text-sm text-muted-foreground">
-          Hover over different sections to learn more about the shoe components
+          Hover over different sections to learn more about the shoe components.
         </p>
       </div>
     </div>
